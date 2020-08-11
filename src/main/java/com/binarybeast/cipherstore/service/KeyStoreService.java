@@ -1,22 +1,14 @@
 package com.binarybeast.cipherstore.service;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 import java.util.Objects;
-
-import javax.print.DocFlavor.STRING;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import org.springframework.vault.client.VaultEndpoint;
 
 import com.binarybeast.cipherstore.secret.Secret;
-
-import lombok.extern.slf4j.Slf4j;
 
 @Service
 

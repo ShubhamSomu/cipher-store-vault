@@ -39,7 +39,7 @@ public class CiperStoreConfiguration {
 
     @Bean("tokenAuthentication")
     @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
-    public TokenAuthentication getTokenAuthentication(){
+    public TokenAuthentication getTokenAuthentication() {
         return new TokenAuthentication(authToken);
     }
 }

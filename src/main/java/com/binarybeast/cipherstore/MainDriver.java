@@ -6,14 +6,16 @@ import org.springframework.vault.core.VaultTemplate;
 import org.springframework.vault.support.VaultResponseSupport;
 
 import com.binarybeast.cipherstore.secret.Secret;
+
 /* No use of this class */
 public class MainDriver {
     private static String SECRET_NAMESPACE = "secret/cipherStore";
+
     public static void main(String[] args) {
         VaultEndpoint endpoint = new VaultEndpoint();
         endpoint.setScheme("http");
 
-        VaultTemplate vaultTemplate = new VaultTemplate(endpoint,new TokenAuthentication("00000000-0000-0000-0000-000000000000"));
+        VaultTemplate vaultTemplate = new VaultTemplate(endpoint, new TokenAuthentication("00000000-0000-0000-0000-000000000000"));
 
         Secret secret = new Secret();
         secret.setMek("pass");

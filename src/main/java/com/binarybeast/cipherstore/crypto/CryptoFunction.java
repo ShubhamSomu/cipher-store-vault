@@ -1,6 +1,5 @@
 package com.binarybeast.cipherstore.crypto;
 
-
 import static com.binarybeast.cipherstore.crypto.CipherUtils.doFinal;
 import static com.binarybeast.cipherstore.crypto.CipherUtils.initCipher;
 import static com.binarybeast.cipherstore.crypto.CipherUtils.newCipher;
@@ -86,7 +85,7 @@ public class CryptoFunction {
         }
     }
 
-    public static Cipher createCipher(SecretKey secretKey, int type, final AlgorithmParameterSpec parameterSpec) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException,InvalidAlgorithmParameterException {
+    public static Cipher createCipher(SecretKey secretKey, int type, final AlgorithmParameterSpec parameterSpec) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException {
         Cipher cipher = Cipher.getInstance(AES_GCM_ALGORITHM);
         cipher.init(type, secretKey, parameterSpec);
         return cipher;

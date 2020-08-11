@@ -29,11 +29,11 @@ public class VaultService {
     }
 
     public VaultTemplate getVaultTemplate() {
-       return new VaultTemplate(vaultEndpoint, tokenAuthentication);
+        return new VaultTemplate(vaultEndpoint, tokenAuthentication);
     }
 
     public void storeInVault(Secret secret) throws Exception {
-        if(StringUtils.isBlank(secretNamespace)){
+        if (StringUtils.isBlank(secretNamespace)) {
             throw new Exception("secretName space is null in properties");
         }
 
@@ -41,7 +41,7 @@ public class VaultService {
     }
 
     public Secret fetchFromVault() throws Exception {
-        if(StringUtils.isBlank(secretNamespace)){
+        if (StringUtils.isBlank(secretNamespace)) {
             throw new Exception("secretName space is null in properties");
         }
         VaultResponseSupport<Secret> support = getVaultTemplate().read(secretNamespace, Secret.class);
