@@ -50,11 +50,11 @@
   <!-- Turn on debug logging for our HikariCP connection pool. -->
   <logger name="com.zaxxer.hikari" level="DEBUG" />
 
-  <logger name="com.binarybeast.cipherstore" level="DEBUG" />
+  <logger name="com.binarybeast.cipherstore" level="TRACE" />
 
   <!--
     todo shubham set this to warn
   -->
-  <logger name="com.binarybeast.cipherstore.service.KeyStoreService" level="DEBUG" />
+  <logger name="com.binarybeast.cipherstore.service.KeyStoreService" level="TRACE" />
 
 </configuration>

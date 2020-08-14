@@ -7,7 +7,7 @@ import org.springframework.vault.support.VaultResponseSupport;
 
 import com.binarybeast.cipherstore.secret.Secret;
 
-/* No use of this class */
+/* NO USE OF THIS CLASS */
 public class MainDriver {
     private static String SECRET_NAMESPACE = "secret/cipherStore";
 
