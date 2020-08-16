@@ -98,8 +98,8 @@ public class TransitEngineService implements VaultEngine, InitializingBean {
          *  > vault write transit/keys/cipherDEKGen/config deletion_allowed=true
          */
 
-        this.checkAndCreateMount();
-        this.checkAndCreateNameSpace();
+      //  this.checkAndCreateMount();
+      //  this.checkAndCreateNameSpace();
 
         //todo shubham keep only 1
         secretService.deleteAll(); // Its bad, but needed, i don't want to add many keys for testing
