@@ -5,8 +5,10 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
+import org.springframework.vault.authentication.ClientAuthentication;
 import org.springframework.vault.authentication.TokenAuthentication;
 import org.springframework.vault.client.VaultEndpoint;
+import org.springframework.vault.core.VaultTemplate;
 
 @Configuration
 public class CiperStoreConfiguration {
@@ -39,7 +41,15 @@ public class CiperStoreConfiguration {
 
     @Bean("tokenAuthentication")
     @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
-    public TokenAuthentication getTokenAuthentication() {
+    public ClientAuthentication getTokenAuthentication() {
         return new TokenAuthentication(authToken);
+    }
+
+
+
+    @Bean("vaultTemplate")
+    @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+    public VaultTemplate getVaultTemplate(){
+        return new VaultTemplate(getVaultEndpoint(),getTokenAuthentication());
     }
 }

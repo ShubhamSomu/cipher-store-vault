@@ -7,7 +7,7 @@ import java.util.Objects;
 import org.springframework.stereotype.Service;
 
 import com.binarybeast.cipherstore.repository.SecretRepository;
-import com.binarybeast.cipherstore.secret.Secret;
+import com.binarybeast.cipherstore.dao.Secret;
 
 @Service
 public class SecretService {

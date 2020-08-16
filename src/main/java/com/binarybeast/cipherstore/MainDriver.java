@@ -1,13 +1,14 @@
 package com.binarybeast.cipherstore;
 
+/* NO USE OF THIS CLASS */
+
 import org.springframework.vault.authentication.TokenAuthentication;
 import org.springframework.vault.client.VaultEndpoint;
 import org.springframework.vault.core.VaultTemplate;
 import org.springframework.vault.support.VaultResponseSupport;
 
-import com.binarybeast.cipherstore.secret.Secret;
+import com.binarybeast.cipherstore.dao.Secret;
 
-/* NO USE OF THIS CLASS */
 public class MainDriver {
     private static String SECRET_NAMESPACE = "secret/cipherStore";
 
