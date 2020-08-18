@@ -1,6 +1,7 @@
 package com.binarybeast.cipherstore.utility;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.vault.client.VaultEndpoint;
 
 import com.binarybeast.cipherstore.service.KvEngineService;
 import com.binarybeast.cipherstore.service.TransitEngineService;
@@ -22,5 +23,11 @@ public class GeneralUtils {
 
         }
         return vaultEngine;
+    }
+
+    private String formUrl(VaultEndpoint endpoint) {
+        String urlString = String.format("%s://%s:%s/%s", endpoint.getScheme(), endpoint.getHost(), endpoint.getPort(),
+                                         endpoint.getPath());
+        return urlString;
     }
 }
